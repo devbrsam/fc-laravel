@@ -14,8 +14,5 @@ RUN ln -s public html
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-#RUN usermod -u 1000 www-data
-#USER www-data
-
 EXPOSE 9000
 ENTRYPOINT ["php-fpm"]
