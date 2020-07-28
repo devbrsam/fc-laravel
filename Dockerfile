@@ -12,6 +12,9 @@ RUN rm -rf /var/www/html
 COPY . /var/www
 RUN ln -s public html
 
+RUN usermod -u 1000 www-data
+USER www-data
+
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 EXPOSE 9000
