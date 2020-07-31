@@ -6,6 +6,6 @@
 
 [devbrsam/codeeducation](https://hub.docker.com/r/devbrsam/codeeducation)
 
-## Docker-compose no GCP
+## docker-compose no GCP
 
 [devbrsam/codeeducation](https://hub.docker.com/r/devbrsam/docker-compose-gcp)
