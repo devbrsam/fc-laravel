@@ -6,6 +6,6 @@
 
 [devbrsam/codeeducation](https://hub.docker.com/r/devbrsam/codeeducation)
 
-## Docker-compose no GCP
+## Repositório docker-compose no GCP
 
-[devbrsam/codeeducation](https://hub.docker.com/r/devbrsam/docker-compose-gcp)
+[devbrsam/docker-compose-gcp](https://github.com/devbrsam/docker-compose-gcp)
