@@ -5,3 +5,7 @@
 ## Imagem do Go no Docker Hub
 
 [devbrsam/codeeducation](https://hub.docker.com/r/devbrsam/codeeducation)
+
+## Docker-compose no GCP
+
+[devbrsam/codeeducation](https://hub.docker.com/r/devbrsam/docker-compose-gcp)
