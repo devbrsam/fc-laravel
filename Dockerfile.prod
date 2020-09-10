@@ -1,16 +1,16 @@
 FROM php:7.4-fpm-alpine
-RUN apk add --no-cache openssl shadow bash mysql-client
+RUN apk add --no-cache openssl shadow bash mysql-client nodejs npm
 RUN docker-php-ext-install pdo pdo_mysql
 
 WORKDIR /var/www
 RUN rm -rf /var/www/html
 #COPY . /var/www
-RUN ln -s public html
+#RUN ln -s public html
 
-RUN usermod -u 1000 www-data
-USER www-data
+#RUN usermod -u 1000 www-data
+#USER www-data
 
-RUN sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 #RUN curl -sS https://getcomposer.org/installer | php
 #RUN mv composer.phar /usr/local/bin/composer
 #RUN chmod +x /usr/local/bin/composer
@@ -18,7 +18,7 @@ RUN sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/
 
 COPY . /var/www
 RUN composer install && \
-    php artisian config:cahce && \
+    php artisan config:cahce && \
     chmod -R 777 storage
 
 EXPOSE 9000
