@@ -22,7 +22,7 @@ spec:
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mysql-path
+              name: mysql-pass
               key: password
 
         envFrom:
