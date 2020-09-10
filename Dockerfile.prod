@@ -10,11 +10,11 @@ RUN ln -s public html
 RUN usermod -u 1000 www-data
 USER www-data
 
-#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN curl -sS https://getcomposer.org/installer | php
-RUN mv composer.phar /usr/local/bin/composer
-RUN chmod +x /usr/local/bin/composer
-RUN composer self-update
+RUN sudo curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#RUN curl -sS https://getcomposer.org/installer | php
+#RUN mv composer.phar /usr/local/bin/composer
+#RUN chmod +x /usr/local/bin/composer
+#RUN composer self-update
 
 COPY . /var/www
 RUN composer install && \
